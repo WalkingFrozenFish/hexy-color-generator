@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hexy - Color generator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,6 +16,23 @@
     <div class="colors">
         <span class="hexy">Hexy - Color generator</span>
         <button class="button">Generate color</button>
+    </div>
+
+    <button class="show-modal">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+
+    <div class="modal">
+        <div class="wrap-modal">
+            <button class="close-modal">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <h2 class="color-history">Color history</h2>
+        </div>
     </div>
 
     <script src="js/script.js"></script>

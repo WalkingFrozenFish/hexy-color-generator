@@ -2,6 +2,19 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
+
+body {
+    position: relative;
 }
 
 .colors {
@@ -14,7 +27,7 @@
 }
 
 .hexy {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     color: black;
     display: flex;
@@ -43,3 +56,98 @@
     top: 1px;
     box-shadow: 1px 1px 2px black;
 }
+
+.show-modal {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px black;
+}
+
+.show-modal:hover {
+    top: 31px;
+    box-shadow: 1px 1px 2px black;
+}
+
+.line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-radius: 25px;
+    background-color: rgb(65, 65, 65);
+}
+
+/* Модальное окно с прокруткой */
+.modal {
+    position: absolute;
+    border-radius: 3px;
+    top: 20px;
+    left: -275px;
+    padding: 10px;
+    transition: 0.2s;
+    width: 270px;
+    max-height: 94vh;
+    overflow: auto;
+    background: #fff;
+    box-shadow: 2px 2px 4px black;
+}
+
+/* Скрытие полосы прокрутки у модального окна */
+.wrap-modal {
+    width: 100%;
+    height: 100%;
+    padding: 0 25px 0 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.close-modal {
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px black;
+    margin-bottom: 20px;
+}
+
+.close-modal:hover {
+    top: 1px;
+    box-shadow: 1px 1px 2px black;
+}
+
+.color-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.color-history {
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+.color-preview {
+    width: 20px;
+    height: 20px;
+}
+
